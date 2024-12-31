@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>ContactUs</title>
+</head>
+
+<body>
+
+  <!-- Top Navigation -->
+  <div class="bg-dark text-white py-2">
+    <div class="container d-flex justify-content-between">
+      <p class="mb-0">Summer Sale For All Swim Suits and Free Express Delivery-OFF 50%!</p>
+      <a href="home.html" class="text-white">SHOP NOW</a>
+    </div>
+  </div>
+
+      <!-- Main Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">EXCLUSIVE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto px-5">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                </ul>
+
+                <div class="nav_items px-5">
+                    <a href="wishlist.html">
+                        <img src="/images/heart.png">
+                    </a>
+                    <a href="cart.html">
+                        <img src="/images/Cart1.png">
+                    </a>
+                </div>
+
+
+                <div class="nav_items">
+                    <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                        <span class="text-dark">LogOut</span>
+                        <img src="images/logout.webp" style="width: 30px;">
+                    </a>
+                </div>
+
+                <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger" id="logoutModalLabel">Alert</h5>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to log out? 
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                <a href="login.html" class="btn btn-danger">Yes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Contact Us Form -->
+<div class="container">
+  <div class="row col-12">
+    <div class="col-lg-6 col-md-6 col-sm-12 shadow rounded">
+      <div class="container my-5">
+        <div class="containerforDiv">
+          <h1 class="text-center mb-4">Contact Us</h1>
+          <form action="#" method="post">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name:</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message:</label>
+              <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-danger">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="container my-5 shadow">
+        <div class="containerforDiv">
+          <h3 class="text-center mb-4">Our Position</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.607017584072!2d30.72935517446311!3d28.128003575944042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b2552474cdc59%3A0xd9d57bc4a705a4ae!2sITI%20-%20Information%20Technology%20Institute%20(AlMinya)!5e0!3m2!1sen!2seg!4v1735302789613!5m2!1sen!2seg"
+            width="100%" height="150px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div class="container my-5">
+        <div class="containerforDiv">
+          <h3 class="text-center mb-4">Call Support Directly</h3>
+          <h6 class="text-center mb-4">Email: abdoali345757@gmail.com</h6>
+          <h6 class="text-center mb-4">Whatsapp Number: 01033053482</h6>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="#" class="text-white">Exclusive</a>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li>Cairo, Egypt</li>
+            <li>abdoali345757@gmail.com</li>
+            <li>01033053482</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Account</h5>
+          <ul class="list-unstyled">
+            <li>Login / Register</li>
+            <li>Cart</li>
+            <li>Shop</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Legal</h5>
+          <ul class="list-unstyled">
+            <li>Privacy policy</li>
+            <li>Terms of use</li>
+            <li>FAQ's</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <p class="mb-0">&copy; Exclusive 2024. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

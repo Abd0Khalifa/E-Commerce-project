@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <title>homePage</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <div class="popup hidden" id="popup">
+    <div class="details">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Image Section -->
+          <div class="col-md-6 text-center">
+            <img id="prodImg"
+              src="https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692947383286-714WUJlhbLS._SL1500_.jpg"
+              alt="Product Image" class="img-fluid product-image">
+          </div>
+          <!-- Text Section -->
+          <div class="col-md-6">
+            <h3 class="text-primary mb-4">Product Details</h3>
+            <p><strong>Title:</strong> <span class="text-muted" id="title">Amazing Product</span></p>
+            <p><strong>Brand:</strong> <span class="text-muted" id="Brand">BrandName</span></p>
+            <p><strong>Model:</strong> <span class="text-muted" id="Model">Model123</span></p>
+            <p><strong>Color:</strong> <span class="text-muted" id="Color">Red</span></p>
+            <p><strong>Description:</strong> <span class="text-muted" id="Description">This is an amazing product that
+                offers great features and value.</span></p>
+            <p><strong>Price:</strong> <span class="text-danger" id="Price">$299.99</span></p>
+            <div class="button-group mt-3">
+              <button class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
+              <button class="btn btn-light" id="loveBtn">
+                  <img src="images/heart.png" alt="Love Icon" class="love-icon"> Love
+              </button>
+              <button class="btn btn-secondary" onclick="closeInfo()">Close</button>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="bg-dark text-white py-2">
+    <div class="container d-flex justify-content-between">
+      <p class="mb-0">Summer Sale For All Swim Suits and Free Express Delivery-OFF 50%!</p>
+      <a href="#" class="text-white">SHOP NOW</a>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">EXCLUSIVE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto px-5">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+          <li class="nav-item"><a class="nav-link" href="order-tracking.html">Track your order</a></li>
+        </ul>
+
+        <div class="nav_items px-5">
+          <a href="wishlist.html">
+            <img src="/images/heart.png">
+          </a>
+          <a href="cart.html">
+            <img src="/images/Cart1.png">
+          </a>
+        </div>
+
+
+        <div class="nav_items">
+          <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#logoutModal">
+            <span class="text-dark">LogOut</span>
+            <img src="images/logout.webp" style="width: 30px;">
+          </a>
+        </div>
+
+        <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-danger" id="logoutModalLabel">Alert</h5>
+              </div>
+              <div class="modal-body">
+                Are you sure you want to log out?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <a href="login.html" class="btn btn-danger">Yes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="list-anchor">
+          <a href="#" class="list-group-item list-group-item-action mb-3">Men's Fashion</a>
+          <a href="#" class="list-group-item list-group-item-action mb-3">Woman's Fashion</a>
+          <a href="#" class="list-group-item list-group-item-action mb-3">Electronics</a>
+          <a href="#" class="list-group-item list-group-item-action mb-3">Home& Lifestyle</a>
+          <a href="#" class="list-group-item list-group-item-action mb-3">Medicine</a>
+          <a href="#" class="list-group-item list-group-item-action mb-3">Sports& Outdoor</a>
+          <a href="#" class="list-group-item list-group-item-action mb-3">Baby's& Toys</a>
+          <a href="#" class="list-group-item list-group-item-action mb-3">Groceries& Pets</a>
+          <a href="#" class="list-group-item list-group-item-action mb-3">Health& Beauty</a>
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <img src="images/header.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- all products -->
+  <div class="container my-4 bg-light p-3">
+    <div class=" d-flex mx-5 mt-4">
+      <i class="fa-solid fa-square text-danger fs-2"></i>
+      <h2 class="mx-2">All Products</h2>
+    </div>
+    <div class="d-flex justify-content-between align-items-center">
+      <h3 class="my-2">Select a Category</h3>
+      <div class="input-group" style="width: 300px;">
+        <input id="allProductsSearchInput" type="text" class="form-control" placeholder="Search products"
+          aria-label="Search products">
+        <button id="allProductsSearchButton" class="btn btn-outline-primary" type="button">Search</button>
+      </div>
+    </div>
+    <div class="btn-group d-flex" role="group" aria-label="Category buttons">
+      <button value="tv" class="btn btn-outline-primary categoryBtn" data-category="tv">TV</button>
+      <button value="audio" class="btn btn-outline-primary categoryBtn" data-category="audio">Audio</button>
+      <button value="mobile" class="btn btn-outline-primary categoryBtn" data-category="mobile">Mobile</button>
+      <button value="laptop" class="btn btn-outline-primary categoryBtn" data-category="laptop">Laptop</button>
+      <button value="gaming" class="btn btn-outline-primary categoryBtn" data-category="gaming">Gaming</button>
+      <button value="appliances" class="btn btn-outline-primary categoryBtn"
+        data-category="appliances">Appliances</button>
+    </div>
+  </div>
+
+
+  <!-- products -->
+
+  <div class="container">
+    <div id="product-slider" class="d-flex align-items-center">
+      <button id="prev" class="btn btn-primary me-3">&lt;</button>
+      <div class="row flex-nowrap overflow-hidden w-100" id="product-container">
+      </div>
+      <button id="next" class="btn btn-primary ms-3">&gt;</button>
+    </div>
+  </div>
+
+
+  <!-- Enhance Your Music Experience -->
+
+
+  <div class="d-flex justify-content-center align-items-center my-4">
+    <section class="py-5 w-75 text-white" style="background: linear-gradient(135deg, #434343 ,#000000 );">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Content Section -->
+          <div class="col-md-6">
+            <div class="mb-4">
+              <p class="text-uppercase mb-2 text-success">Categories</p>
+              <h2 class="fw-bold mb-4">Enhance Your Gaming Experience</h2>
+              <p class="fs-4">With Many Sales</p>
+              <a href="#" class="btn btn-success">Buy Now!</a>
+            </div>
+          </div>
+          <!-- Image Section -->
+          <div class="col-md-6 text-center">
+            <img src="images/gallery/gallery-1.png" width="250px" alt="Speaker Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+  <!-- our sales -->
+
+  <div>
+    <div class="d-flex mx-5 mt-4">
+      <i class="fa-solid fa-square text-danger fs-4"></i>
+      <h3 class="mx-2">Our Sales</h3>
+      <div id="countdown" class="ms-4 fs-4 text-danger"></div> <!-- Timer container -->
+    </div>
+    <p class="mx-5">Hurry! Limited time offer (Get up to 50% off on all products!)</p>
+  </div>
+
+  <div class="container">
+    <div class="row" id="sale">
+
+    </div>
+  </div>
+
+
+
+  <!-- new arrival -->
+
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="mb-4 text-center">
+        <p class="text-uppercase fw-bold text-secondary">Featured</p>
+      </div>
+      <div class="d-flex justify-content-center mb-4">
+        <i class="fa-solid fa-square text-danger fs-4"></i>
+        <h3 class="mx-2">New Arrival</h3>
+      </div>
+      <div class="row g-4" style="height: 500px;">
+        <div class="col-lg-6">
+          <div class="card h-100 border-0 shadow-sm text-white"
+            style="background-image: url('./images/gallery/gallery-1.png'); background-size: cover; background-position: center;">
+            <div class="card-body d-flex flex-column justify-content-end text-center" style="height: 100%;">
+              <h5 class="card-title">Playstation</h5>
+              <p class="card-text">Experience Next-Level Gaming with the Ultimate PlayStation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <div class="col-12" style="height: 250px;">
+              <div class="card h-100 border-0 shadow-sm text-white"
+                style="background-image: url('./images/gallery/gallery-2.png'); background-size: cover; background-position: center;">
+                <div class="card-body d-flex flex-column justify-content-end text-center" style="height: 100%;">
+                  <h5 class="card-title">Hats</h5>
+                  <p class="card-text">Elevate Your Style with Our Chic Hat Collection</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6" style="height: 250px;">
+              <div class="card h-100 border-0 shadow-sm text-white"
+                style="background-image: url('./images/gallery/gallery-3.png'); background-size: cover; background-position: center;">
+                <div class="card-body d-flex flex-column justify-content-end text-center" style="height: 100%;">
+                  <h5 class="card-title">Sterios</h5>
+                  <p class="card-text">Experience superior sound with our top-of-the-line headphones!</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6" style="height: 250px;">
+              <div class="card h-100 border-0 shadow-sm text-white"
+                style="background-image: url('./images/gallery/gallery-4.png'); background-size: cover; background-position: center;">
+                <div class="card-body d-flex flex-column justify-content-end text-center" style="height: 100%;">
+                  <h5 class="card-title">perfumes</h5>
+                  <p class="card-text">Indulge in the Essence of Elegance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- features -->
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <img src="images/icons/service-1.png" alt="" class="img-fluid mb-3" style="width: 50px;">
+              <h3 class="card-title fs-5">FAST AND FREE DELIVERY</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <img src="images/icons/service-2.png" alt="" class="img-fluid mb-3" style="width: 50px;">
+              <h3 class="card-title fs-5">24/7 CUSTOMER SERVICE</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <img src="images/icons/service-3.png" alt="" class="img-fluid mb-3" style="width: 50px;">
+              <h3 class="card-title fs-5">MONEY BACK GUARANTEE</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="#" class="text-white">Exclusive</a>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li>Cairo, Egypt</li>
+            <li>abdoali345757@gmail.com</li>
+            <li>01033053482</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Account</h5>
+          <ul class="list-unstyled">
+            <li>Login / Register</li>
+            <li>Cart</li>
+            <li>Shop</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Legal</h5>
+          <ul class="list-unstyled">
+            <li>Privacy policy</li>
+            <li>Terms of use</li>
+            <li>FAQ's</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <p class="mb-0">&copy; Exclusive 2024. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
+  <script src="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

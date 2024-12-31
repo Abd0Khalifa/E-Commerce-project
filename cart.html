@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <title>Cart</title>
+</head>
+
+<body class="d-flex flex-column" style="height: 100vh;">
+    <!-- Top Nav -->
+    <div class="bg-dark text-white py-2">
+        <div class="container d-flex justify-content-between">
+            <p class="mb-0">Summer Sale For All Swim Suits and Free Express Delivery-OFF 50%!</p>
+            <a href="home.html" class="text-white">SHOP NOW</a>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">EXCLUSIVE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto px-5">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                </ul>
+
+                <div class="nav_items px-5">
+                    <a href="wishlist.html">
+                        <img src="/images/heart.png">
+                    </a>
+                    <a href="cart.html">
+                        <img src="/images/Cart1.png">
+                    </a>
+                </div>
+
+
+                <div class="nav_items">
+                    <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                        <span class="text-dark">LogOut</span>
+                        <img src="images/logout.webp" style="width: 30px;">
+                    </a>
+                </div>
+
+                <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger" id="logoutModalLabel">Alert</h5>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to log out?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                <a href="login.html" class="btn btn-danger">Yes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div>
+        <h1 class="text-center">Your Cart</h1>
+    </div>
+
+    <!-- Cart Section -->
+    <section class="py-5 shadow">
+        <div class="container">
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white text-start d-flex justify-content-around">
+                    <span>Product ID</span>
+                    <span>Product Title</span>
+                    <span>Product Image</span>
+                    <span>Quantity</span>
+                    <span>Price</span>
+                    <span>Delete</span>
+                </div>
+                <div class="card-body shadow ">
+                </div>
+                <div class="card-footer text-end">
+                    <strong>Total:</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center p-4">
+        <button class="btn btn-danger " id="placeOrderBtn" disabled>Place Order</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#" class="text-white">Exclusive</a>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li>Cairo, Egypt</li>
+                        <li>abdoali@gmail.com</li>
+                        <li>01033053482</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Account</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-white text-decoration-none d-inline-block">Login</a>
+                            <span>/</span>
+                            <a href="#" class="text-white text-decoration-none d-inline-block">Register</a>
+                        </li>
+                        <li><a href="#" class="text-white text-decoration-none">Cart</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Privacy policy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Terms of use</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ's</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="mb-0">&copy; Exclusive 2024. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- delete confirm part -->
+
+    <div class="modal fade" id="deletePopup" tabindex="-1" aria-labelledby="deletePopupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deletePopupLabel">Delete Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this item?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (!localStorage.getItem('cartItems') || JSON.parse(localStorage.getItem('cartItems')).length === 0) {
+                localStorage.setItem('cartItems', JSON.stringify([]));
+            }
+
+            var cartItemsContainer = document.querySelector('.card-body');
+            var totalElement = document.querySelector('.card-footer strong');
+            var cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+            function updateCart() {
+                var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                var cartItemsContainer = document.querySelector('.card-body');
+                var totalElement = document.querySelector('.card-footer strong');
+
+                if (cartItems.length === 0) {
+                    cartItemsContainer.innerHTML = `<p class="text-center">Your cart is empty!</p>`;
+                    totalElement.textContent = `Total: $0`;
+                    document.getElementById('placeOrderBtn').disabled = true;
+                    return;
+                }
+
+                cartItemsContainer.innerHTML = '';
+                var totalPrice = 0;
+
+                cartItems.forEach(item => {
+                    var itemTotal = item.price * item.quantity;
+                    totalPrice += itemTotal;
+
+                    var productRow = `
+                <div class="row mb-3 text-center justify-content-around">
+                    <div class="col-2">${item.id}</div>
+                    <div class="col-3">${item.title}</div>
+                    <div class="col-2">
+                        <img src="${item.image}" class="img-fluid" style="max-width: 50px;">
+                    </div>
+                    <div class="col-1">${item.quantity}</div>
+                    <div class="col-2 text-center">$${itemTotal.toFixed(2)}</div>
+                    <div class="col-2 text-center">
+                        <button class="btn btn-danger btn-sm delete-btn" data-id="${item.id}">Delete</button>
+                    </div>
+                </div>
+                `;
+                    cartItemsContainer.innerHTML += productRow;
+                });
+
+                totalElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+                document.getElementById('placeOrderBtn').disabled = false;
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                updateCart();
+
+                document.querySelector('.card-body').addEventListener('click', function (e) {
+                    if (e.target.classList.contains('delete-btn')) {
+                        var productId = e.target.getAttribute('data-id');
+                        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                        cartItems = cartItems.filter(item => item.id != productId);
+                        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                        updateCart();
+                    }
+                });
+            });
+
+            updateCart();
+
+            var deletePopup = new bootstrap.Modal(document.getElementById('deletePopup'));
+            var confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+            var currentItemId;
+
+            document.addEventListener('click', function (e) {
+                if (e.target.classList.contains('delete-btn')) {
+                    currentItemId = e.target.dataset.id;
+                    deletePopup.show();
+                }
+            });
+
+            confirmDeleteBtn.addEventListener('click', function () {
+                cartItems = cartItems.filter(item => item.id !== parseInt(currentItemId));
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+                if (cartItems.length === 0) {
+                    localStorage.setItem('cartItems', JSON.stringify([]));
+                }
+
+                updateCart();
+
+                confirmDeleteBtn.blur();
+
+                deletePopup.hide();
+            });
+
+            function addToCart(product) {
+                var existingProduct = cartItems.find(item => item.id === product.id);
+                if (existingProduct) {
+                    existingProduct.quantity += 1;
+                } else {
+                    product.quantity = 1;
+                    cartItems.push(product);
+                }
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                updateCart();
+            };
+
+            var placeOrderBtn = document.getElementById('placeOrderBtn');
+            placeOrderBtn.addEventListener('click', function () {
+                if (cartItems.length === 0) {
+                    alert("Your cart is empty. Please add items to the cart.");
+                    return;
+                }
+
+                // توليد ID فريد للطلب
+                var orderId = 'ORD-' + Date.now();
+
+                // استرجاع بيانات المستخدم من localStorage
+                var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                var customerName = currentUser ? currentUser.name : "Guest"; // إذا كان هناك مستخدم مسجل، استخدم اسمه، وإلا استخدم "Guest"
+
+                // حساب السعر الإجمالي للطلب
+                var totalPrice = cartItems.reduce(function (total, item) {
+                    return total + (item.price * item.quantity);
+                }, 0);
+
+                // تحديد الحالة بناءً على منطق ديناميكي
+                var status = cartItems.length > 5 ? "processing" : "pending";
+
+                // إنشاء بيانات الطلب
+                var orderData = {
+                    orderId: orderId,
+                    customerName: customerName,
+                    items: cartItems,
+                    totalPrice: totalPrice.toFixed(2), // تخزين السعر الإجمالي
+                    status: status,
+                    orderDate: new Date().toISOString()
+                };
+
+                // استرجاع الطلبات السابقة من localStorage إذا كانت موجودة
+                var previousOrders = JSON.parse(localStorage.getItem('orders')) || [];
+
+                // إضافة الطلب الجديد إلى قائمة الطلبات السابقة
+                previousOrders.push(orderData);
+
+                // تخزين جميع الطلبات في localStorage
+                localStorage.setItem('orders', JSON.stringify(previousOrders));
+
+                // تحديث currentOrder ليكون الطلب الأخير
+                localStorage.setItem('currentOrder', JSON.stringify(orderData));
+
+                // مسح السلة من الـ localStorage بعد إتمام الطلب
+                localStorage.setItem('cartItems', JSON.stringify([]));
+
+                // إعادة توجيه المستخدم إلى صفحة تتبع الطلب
+                window.location.href = 'order-tracking.html';
+            });
+
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>
